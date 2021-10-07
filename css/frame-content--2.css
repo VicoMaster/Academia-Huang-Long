@@ -27,7 +27,7 @@
 }
 
 .img-maestros {
-    border: 1px solid #A49B91;
+    border: 2px solid #A49B91;
     box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
     height: 100%;
     object-fit: fill;
@@ -37,7 +37,7 @@
 .container-texto--2 {
     align-items: center;
     background-color: #EFE6DC;
-    border: 1px solid #A49B91;
+    border: 2px solid #A49B91;
     box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
     display: flex;
     font-family: 'Raleway', sans-serif;
