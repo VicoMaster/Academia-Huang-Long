@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.title-academy {
+    text-align: center;
+}
+
+.central-title {
+    margin-top: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 210;
+}
+
+.span-title {
+    color: #111111;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.yellow-line {
+    background-color: #E3BA08;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.quick-access {
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.access {
+    border-bottom: 1px solid #000;
+    color: #111111;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-decoration-line: none;
+}
+
+@media (max-width: 1020px) {
+    .span-title {
+        font-size: 25px;
+    }
+}

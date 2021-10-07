@@ -1,0 +1,83 @@
+@import url(banner.css);
+@import url(academia-title.css);
+@import url(menu.css);
+@import url(frame-content--1.css);
+@import url(frame-content--2.css);
+@import url(frame-content--3.css);
+@import url(social-culture.css);
+@import url(choy-li-fat.css);
+@import url(wing-chun.css);
+@import url(tai-chi.css);
+@import url(horario-map.css);
+@import url(footer.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.background {
+    height: 100%;
+    position: relative;
+    width: 100vw;
+}
+
+.background::before {
+    background-image: url(../img/background_body_0.jpg);
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.container-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 3px;
+    width: 100vw;
+}
+
+.dragon_1 {
+    content: url(../img/celestial_dragon_grey.png);
+    height: 429px;
+    opacity: .7;
+    position: absolute;
+    top: 40vh;
+    transform: scaleX(-1) rotate(10deg);
+    width: 323px;
+}
+
+.dragon_2 {
+    content: url(../img/celestial_dragon_grey.png);
+    height: 429px;
+    opacity: .7;
+    position: absolute;
+    right: -100px;
+    transform: rotate(-40deg);
+    top: -50px;
+    width: 323px;
+}
+
+@media (max-width: 1020px) {
+    .dragon_1 {
+        transform: scaleX(-1) rotate(20deg);
+        bottom: 55vh;
+        right: 45%;
+        opacity: .2;
+    }
+    .dragon_2 {
+        display: none;
+    }
+}

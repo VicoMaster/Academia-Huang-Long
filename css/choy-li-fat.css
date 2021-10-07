@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container-cont-clf {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-choy-li-fat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 1000px;
+    flex-direction: row;
+    margin-top: 15px;
+    padding: 3px;
+}
+
+.container-description-cont-clf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+}
+
+.container-img-clf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: auto;
+}
+
+.img-choylifat-letras {
+    object-fit: fill;
+    height: 100%;
+    width: auto;
+}
+
+.container-h3-cont-clf {
+    align-items: center;
+    display: flex;
+    height: 5%;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container-h3-cont-clf>h3 {
+    color: #111111;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+}
+
+.container-text-cont-clf {
+    align-items: center;
+    color: #111111;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    height: 80%;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.container-img-cont-clf {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.img-maestros-choy {
+    border: 1px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    height: 100%;
+    object-fit: fill;
+    width: auto;
+}
+
+@media (max-width: 1020px) {
+    .container-choy-li-fat {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+    .container-description-cont-clf {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 10px;
+    }
+    .container-img-cont-clf {
+        width: 90%;
+        height: auto;
+    }
+    .img-choylifat-letras {
+        height: auto;
+        width: 50%;
+    }
+    .img-maestros-choy {
+        height: auto;
+        width: 100%;
+    }
+}

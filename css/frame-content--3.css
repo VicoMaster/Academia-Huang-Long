@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container-cont-kids {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.content--3 {
+    background-color: #EFE6DC;
+    border: 1px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    display: flex;
+    height: 370px;
+    justify-content: space-around;
+    width: 1000px;
+}
+
+.container-img-cont-kids {
+    width: 50%;
+    height: auto;
+    margin: 10px;
+}
+
+.img-sifu-kids {
+    border: 1px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    height: 100%;
+    object-fit: fill;
+    width: auto;
+}
+
+.container-texto--3 {
+    align-items: center;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    height: auto;
+    justify-content: center;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    width: 50%;
+}
+
+.container-texto--3::before {
+    background-image: url(../img/logo_academy.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    position: absolute;
+    width: 100%;
+    filter: opacity(.2);
+}
+
+@media (max-width: 1020px) {
+    .content--3 {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .content--3 :nth-child(1){
+        order: 2;
+    }
+
+    .container-img-cont-kids {
+        width: 100%;
+        height: auto;
+        margin: 0px;
+    }
+    .img-sifu-kids {
+        height: auto;
+        width: 100%;
+    }
+    .container-texto--3 {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .container-texto--3::before {
+        background-size: 40% auto;
+    }
+}
