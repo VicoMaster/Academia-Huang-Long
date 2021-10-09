@@ -13,6 +13,7 @@
 @import url(galeria-videos.css);
 @import url(footer.css);
 @import url(gallery-img.css);
+@import url(boton-up.css);
 
 * {
     box-sizing: border-box;

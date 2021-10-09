@@ -1,0 +1,77 @@
+.go-top-container {
+    bottom: 2rem;
+    height: 6.6rem;
+    position: fixed;
+    right: 2rem;
+    width: 6.6rem;
+}
+
+.go-top-button {
+    height: 0rem;
+    height: 6.6rem;
+    right: 4rem;
+    width: 0rem;
+    width: 6.6rem;
+    z-index: -1;
+}
+
+.botton-up {
+    background-color: #A49B91;
+    background-image: url(../img/arrow-top.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    border-radius: 3px;
+    border: 2px solid #756B60;
+    box-shadow: 0px 4px 6px 0px rgb(0, 0, 0, .25);
+    color: white;   
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    left: 95%;
+    margin: 5px;
+    position: absolute;
+    top: 95%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .2s;
+    width: 40px;
+}
+
+.show {
+    z-index: 999;
+}
+
+.show .go-top-button {
+    animation: popup .3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: 12;
+}
+
+.show .botton-up {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0% {
+        width: 0rem;
+        height: 0rem;
+    }
+    50% {
+        width: 0rem;
+        height: 8rem;
+    }
+    100% {
+        width: 6.6rem;
+        height: 6.6rem;
+    }
+}
+
+@media (max-width: 1020px) {
+    .botton-up {
+        top: 100%;
+        left: 100%;
+    }
+}
