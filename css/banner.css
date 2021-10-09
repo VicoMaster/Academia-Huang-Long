@@ -151,6 +151,11 @@
 }
 
 @media (max-width: 1020px) {
+
+    .banner {
+        background-image: url(../img/test-banner-responsive.png);
+    }
+
     .container-icons-bot::before {
         margin-bottom: 40px;
         margin-left: 0px;

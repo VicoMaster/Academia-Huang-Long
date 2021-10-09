@@ -12,6 +12,7 @@
 @import url(facebook.css);
 @import url(galeria-videos.css);
 @import url(footer.css);
+@import url(gallery-img.css);
 
 * {
     box-sizing: border-box;
