@@ -154,6 +154,7 @@
 
     .banner {
         background-image: url(../img/maestros-banner-vertical.jpg);
+        box-shadow: none;
     }
 
     .container-icons-bot::before {
