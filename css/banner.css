@@ -157,14 +157,16 @@
     }
 
     .container-icons-bot::before {
-        margin-bottom: 40px;
+        /**margin-bottom: 40px;
         margin-left: 0px;
-        background-size: 40px 40px;
+        background-size: 40px 40px;**/
+        display: none;
     }
 
     .container-icons-bot::after {
-        margin-bottom: 40px;
+        /**margin-bottom: 40px;
         margin-right: 0px;
-        background-size: 40px 40px;
+        background-size: 40px 40px;**/
+        display: none;
     }
 }
