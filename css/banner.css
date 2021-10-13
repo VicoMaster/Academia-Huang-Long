@@ -10,7 +10,8 @@
 /*CONTENEDOR DEL BANNER*/
 .banner {
     background-color: #EFE6DC;
-    background-image: url(../img/banner_maestros_inst.jpg);
+    /*background-image: url(../img/banner_maestros_inst.jpg);*/
+    background-image: url(../img/banner_1_academia.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -153,7 +154,8 @@
 @media (max-width: 1020px) {
 
     .banner {
-        background-image: url(../img/maestros-banner-vertical.jpg);
+        /*background-image: url(../img/maestros-banner-vertical.jpg);*/
+        background-image: url(../img/banner_1_academia_resp.jpg);
         box-shadow: none;
         height: 500px;
     }
