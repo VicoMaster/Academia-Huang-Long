@@ -21,23 +21,23 @@
         <div class="container-content">
             <!--BANNER-->
             <div class="container">
-                <div class="banner">
+                <div id="Inicio" class="banner">
                     <div class="container-icons-top">
                         <div class="container-icons-left">
                             <div class="icon-banner icon-hamburguesa"></div>
                         </div>
                         <div class="container-icons-right">
-                            <div class="icon-banner icon-wiki"></div>
+                            <a href="https://es.wikipedia.org/wiki/%C3%81lvaro_Le%C3%B3n_Medina" target="_blank" class="icon-banner icon-wiki"></a>
                             <div class="icon-banner icon-youtube"></div>
-                            <div class="icon-banner icon-facebook"></div>
+                            <a href="https://www.facebook.com/academiahuanlong" target="_blank" class="icon-banner icon-facebook"></a>
                         </div>
                     </div>
                     <div class="container-icons-bot">
-                        <div id="icon-1" class="icon-banner icon-circle--full "></div>
-                        <div id="icon-2" class="icon-banner icon-circle--empty"></div>
+                        <div id="icon-1" class="icon-banner icon-circle circle-1"></div>
+                        <div id="icon-2" class="icon-banner icon-circle circle-2"></div>
                         <div id="icon-3" class="icon-banner icon-slider"></div>
-                        <div id="icon-4" class="icon-banner icon-circle--empty"></div>
-                        <div id="icon-5" class="icon-banner icon-circle--empty"></div>
+                        <div id="icon-4" class="icon-banner icon-circle circle-3"></div>
+                        <div id="icon-5" class="icon-banner icon-circle circle-4"></div>
                     </div>
                 </div>
             </div>
@@ -58,15 +58,15 @@
 
             <!--MENU-->
             <div class="menu">
-                <button class="button button--active">Inicio</button>
-                <button class="button">La Academia</button>
+                <button onclick="window.location.href='#Inicio'" class="button button--active">Inicio</button>
+                <button onclick="window.location.href='#Academia'" class="button">La Academia</button>
                 <div class="logo-dragon"></div>
-                <button class="button">Clases</button>
-                <button class="button">Galeria</button>
+                <button onclick="window.location.href='#Clases'" class="button">Clases</button>
+                <button onclick="window.location.href='#Galeria'" class="button">Galeria</button>
             </div>
 
             <!--LA ACADEMIA-->
-            <div class="central-title">
+            <div id="Academia" class="central-title">
                 <h1 class="title-academy">
                     <span class="span-title">
                         La Academia
@@ -283,7 +283,7 @@
                 </div>
             </div>
             <!--HORARIOS - MAP-->
-            <div class="container-hm">
+            <div id="Clases" class="container-hm">
                 <div class="container-horario">
                     <div class="container-clases">
                         <div class="container-h3-text-hm">
@@ -333,7 +333,7 @@
                 </div>
             </div>
             <!--GALERIA-->
-            <div class="central-title">
+            <div id="Galeria" class="central-title">
                 <h1 class="title-academy">
                     <span class="span-title">
                         Galería

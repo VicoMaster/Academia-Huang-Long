@@ -9,9 +9,7 @@
 
 /*CONTENEDOR DEL BANNER*/
 .banner {
-    background-color: #EFE6DC;
-    /*background-image: url(../img/banner_maestros_inst.jpg);*/
-    background-image: url(../img/banner_1_academia.jpg);
+    background-image: url(../img/banners/Banner-1/banner-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -21,6 +19,24 @@
     height: 430px;
     position: relative;
     width: 1000px;
+    animation-name: banner-swip;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+
+@keyframes banner-swip {
+    5%, 30% {
+        background-image: url(../img/banners/Banner-1/banner-1.jpg);
+    }
+    35%, 65% {
+        background-image: url(../img/banners/Banner-2/banner-2.jpg);
+    }
+    75%, 95% {
+        background-image: url(../img/banners/Banner-3/banner-choy-li-fat.jpg);
+    }
 }
 
 /*CONTENEDOR DE ICONOS SUPERIOR*/
@@ -137,27 +153,89 @@
     transform: rotate(90deg);
 }
 
-.icon-circle--full {
-    background-image: url(../img/logo_circulo_full.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-}
-
-.icon-circle--empty {
+.icon-circle {
     background-image: url(../img/logo_circulo_empty.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
 
+.circle-1 {
+    animation-name: circle-1;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.circle-2 {
+    animation-name: circle-2;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: 3s;
+}
+
+.circle-3 {
+    animation-name: circle-3;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: 6s;
+}
+
+.circle-4 {
+    background-image: url(../img/logo_circulo_empty.png);
+}
+
+@keyframes circle-1 {
+    5%, 35% {
+        background-image: url(../img/logo_circulo_full.png);
+    }
+    40%, 100% {
+        background-image: url(../img/logo_circulo_empty.png);
+    }
+}
+
+@keyframes circle-2 {
+    5%, 35% {
+        background-image: url(../img/logo_circulo_full.png);
+    }
+    40%, 100% {
+        background-image: url(../img/logo_circulo_empty.png);
+    }
+}
+
+@keyframes circle-3 {
+    5%, 35% {
+        background-image: url(../img/logo_circulo_full.png);
+    }
+    40%, 100%{
+        background-image: url(../img/logo_circulo_empty.png);
+    }
+}
+
 @media (max-width: 1020px) {
 
     .banner {
         /*background-image: url(../img/maestros-banner-vertical.jpg);*/
-        background-image: url(../img/banner_1_academia_resp.jpg);
+        background-image: url(../img/banners/Banner-1/banner-1-vertical.jpg);
         box-shadow: none;
         height: 500px;
+    }
+
+    @keyframes banner-swip {
+        5%, 30% {
+            background-image: url(../img/banners/Banner-1/banner-1-vertical.jpg);
+        }
+        35%, 65% {
+            background-image: url(../img/banners/Banner-2/banner-2-vertical.jpg);
+        }
+        75%, 95% {
+            background-image: url(../img/banners/Banner-3/banner-choy-li-fat_vertical.jpg);
+        }
     }
 
     .container-icons-bot::before {
