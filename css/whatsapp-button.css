@@ -10,7 +10,22 @@
     position: fixed;
     left: 3em;
     width: 6.6em;
-    z-index: 777;
+    z-index: 9999;
+    visibility: hidden;
+}
+.button-whatsapp {
+    z-index: 9998;
+}
+
+.show-whatsapp {
+    visibility: visible;
+}
+
+.show-whatsapp {
+    animation: popup .3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: 999;
 }
 
 .hover-scale {
@@ -25,14 +40,37 @@
     transform: scale(1.13);
 }
 
+@keyframes popup-whatsapp {
+    0% {
+        width: 0rem;
+        height: 0rem;
+    }
+    50% {
+        width: 0rem;
+        height: 8rem;
+    }
+    100% {
+        width: 6.6rem;
+        height: 6.6rem;
+    }
+}
+
 
 @media (max-width: 1020px) {
     .container-button-whatsapp {
-        left: 0em;
-        bottom: 0.5em;
+        left: 0.3em;
+        bottom: 0.3em;
     }
 
     .iconify {
+        transform: scale(.6);
+    }
+
+    .hover-scale:active {
         transform: scale(.8);
+    }
+    
+    .hover-scale:hover {
+        transform: scale(.7);
     }
 }
