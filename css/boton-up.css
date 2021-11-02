@@ -1,8 +1,8 @@
 .go-top-container {
-    bottom: 2rem;
+    bottom: 4rem;
     height: 6.6rem;
     position: fixed;
-    right: 2rem;
+    right: 4rem;
     width: 6.6rem;
 }
 
@@ -73,5 +73,10 @@
     .botton-up {
         top: 100%;
         left: 100%;
+    }
+
+    .go-top-container {
+        bottom: 3.5rem;
+        right: 3.5rem;
     }
 }
