@@ -33,7 +33,7 @@ body {
 }
 
 .background::before {
-    background-image: url(../img/background_body_0.jpg);
+    background-image: url(../img/background_body_0.webp);
     bottom: 0;
     content: "";
     left: 0;
