@@ -82,7 +82,7 @@
     animation-name: banner-swip;
     animation-timing-function: linear;
     animation-play-state: running;
-    background-image: url(../img/banners/Banner-1/banner-1.jpg);
+    background-image: url(../img/banners/Banner-1/banner-1.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -100,16 +100,16 @@
 
 @keyframes banner-swip {
     5%, 25% {
-        background-image: url(../img/banners/Banner-1/banner-1.jpg);
+        background-image: url(../img/banners/Banner-1/banner-1.webp);
     }
     30%, 50% {
-        background-image: url(../img/banners/Banner-2/banner-2.jpg);
+        background-image: url(../img/banners/Banner-2/banner-2.webp);
     }
     55%, 75% {
-        background-image: url(../img/banners/Banner-3/banner-choy-li-fat.jpg);
+        background-image: url(../img/banners/Banner-3/banner-choy-li-fat.webp);
     }
     80%, 95% {
-        background-image: url(../img/banners/Banner-4/banner-4.jpg);
+        background-image: url(../img/banners/Banner-4/banner-4.webp);
     }
 }
 
@@ -313,23 +313,23 @@
 
     .banner {
         /*background-image: url(../img/maestros-banner-vertical.jpg);*/
-        background-image: url(../img/banners/Banner-1/banner-1-vertical.jpg);
+        background-image: url(../img/banners/Banner-1/banner-1-vertical.webp);
         box-shadow: none;
         height: 500px;
     }
 
     @keyframes banner-swip {
         5%, 25% {
-            background-image: url(../img/banners/Banner-1/banner-1-vertical.jpg);
+            background-image: url(../img/banners/Banner-1/banner-1-vertical.webp);
         }
         30%, 50% {
-            background-image: url(../img/banners/Banner-2/banner-2-vertical.jpg);
+            background-image: url(../img/banners/Banner-2/banner-2-vertical.webp);
         }
         55%, 75% {
-            background-image: url(../img/banners/Banner-3/banner-choy-li-fat_vertical.jpg);
+            background-image: url(../img/banners/Banner-3/banner-choy-li-fat_vertical.webp);
         }
         80%, 95% {
-            background-image: url(../img/banners/Banner-4/banner-4-vertical.jpg);
+            background-image: url(../img/banners/Banner-4/banner-4-vertical.webp);
         }
     }
 
