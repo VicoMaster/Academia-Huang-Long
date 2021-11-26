@@ -23,6 +23,7 @@
             <div class="container">
                 <div id="Inicio" class="banner">
                     <!-- Barra de Flechas -->
+                    <!-- SE COMENTAREA POR DESUSO 
                     <div class="banner-bar">
                         <div class="container-arrow hover-scale">
                             <span class="iconify" data-icon="bx:bx-left-arrow" style="color: #e3ba08;"
@@ -33,17 +34,18 @@
                                 data-height="40"></span>
                         </div>
                     </div>
+                    -->
                     <!-- Barra de texto -->
-                    <div class="text-bar text-bar-1 animation-text">
+                    <div id="text-bar" class="text-bar text-bar-1 animation-text">
                         <h3>DISCIPLINA, RESPETO Y TRADICI&Oacute;N</h3>
                     </div>
-                    <div class="text-bar text-bar-2 animation-text">
+                    <div id="text-bar" class="text-bar text-bar-2 animation-text">
                         <h3>LINAJE DE GRANDES MAESTROS</h3>
                     </div>
-                    <div class="text-bar text-bar-3 animation-text">
+                    <div id="text-bar" class="text-bar text-bar-3 animation-text">
                         <h3>ENSEÑANZAS ANCESTRALES</h3>
                     </div>
-                    <div class="text-bar text-bar-4 animation-text">
+                    <div id="text-bar" class="text-bar text-bar-4 animation-text">
                         <h3>LEGADO INMORTAL</h3>
                     </div>
                     <!-- Barra de iconos top -->
@@ -54,7 +56,7 @@
                         <div class="container-icons-right">
                             <a href="https://es.wikipedia.org/wiki/%C3%81lvaro_Le%C3%B3n_Medina" target="_blank"
                                 class="icon-banner icon-wiki hover-scale"></a>
-                            <a href="https://youtu.be/ts_BnTKv0Pw" target="_blank"
+                            <a href="https://www.youtube.com/channel/UCvkQ-3MTtz6fcaL7xlgh63Q" target="_blank"
                                 class="icon-banner icon-youtube hover-scale"></a>
                             <a href="https://www.facebook.com/academiahuanlong" target="_blank"
                                 class="icon-banner icon-facebook hover-scale"></a>
@@ -62,14 +64,14 @@
                     </div>
                     <!-- Barra de iconos bot -->
                     <div class="container-icons-bot">
-                        <div id="icon-1" class="icon-banner icon-circle circle-1 hover-scale"></div>
-                        <div id="icon-2" class="icon-banner icon-circle circle-2 hover-scale"></div>
-                        <div id="icon-3" class="hover-scale">
-                            <span class="iconify pause-icon" data-icon="clarity:pause-solid"
+                        <div id="icon-circle" class="icon-banner icon-circle circle-1"></div>
+                        <div id="icon-circle" class="icon-banner icon-circle circle-2"></div>
+                        <div id="icon-pause" class="hover-scale">
+                            <span id="iconify-pause" class="iconify pause-icon" data-icon="clarity:pause-solid"
                                 style="cursor: pointer; color: #e3ba08;" data-height="35"></span>
                         </div>
-                        <div id="icon-4" class="icon-banner icon-circle circle-3 hover-scale"></div>
-                        <div id="icon-5" class="icon-banner icon-circle circle-4 hover-scale"></div>
+                        <div id="icon-circle" class="icon-banner icon-circle circle-3"></div>
+                        <div id="icon-circle" class="icon-banner icon-circle circle-4"></div>
                     </div>
                 </div>
             </div>
@@ -502,7 +504,7 @@
         <a class="button-whatsapp"
             href="https://wa.me/573112144150/?text=¡Hola!%20quiero%20información%20sobre%20la%20academia"
             target="_blank">
-            <span class="iconify hover-scale" data-icon="logos:whatsapp" style="color: #e3ba08;"
+            <span class="iconify hover-scale-wp" data-icon="logos:whatsapp" style="color: #e3ba08;"
                 data-height="70"></span>
         </a>
     </div>
@@ -530,6 +532,8 @@
 
     <!--JS-->
     <script src="js/go-top.js"></script>
+    <!-- Boton pausa -->
+    <script src="js/banner-pause.js"></script>
     <!-- Api icono para el banner ICONIFY -->
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
