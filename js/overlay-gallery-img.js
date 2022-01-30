@@ -23,10 +23,12 @@ let contadorImagenesFlex = 0, // Variable que llena el numero de img FLEX
     botonSaveGallery = botonesGalleryFlex.children[0], //Botón seleccionado en gallery flex
     idImagenGallery = 0, //contador para saber el id de la imagen en la galería flex
     imagenId = 0, //Id que indica que imagen-small está seleccionada
-    nombreImagen = NOMBRE_IMAGEN_DESCARGAR;
+    nombreImagen = NOMBRE_IMAGEN_DESCARGAR,
+    listSelect = selectGalleryFlex.children[0]; //Guarda la seleccion menu-lista
 
 //CARGA DE BLOQUES
 cargaImgFlexGallery();
+listSelect.classList.add('button--active');
 
 //FUNCIONES
 function selecImgFooter(indexImgFooter) {
@@ -170,10 +172,15 @@ function retrocederImagen() {
     moverCarrusel();
 }
 
-function selectOptionGallery(event){
-    let selectValue = event.target.value;
-    botonSaveGallery = botonesGalleryFlex.children[selectValue];
-    cargaImgFlexGallery();
+function selectOptionGallery(event) {
+    if (event.target.nodeName === 'LI') {
+        listSelect.classList.remove('button--active');
+        listSelect = event.target;
+        event.target.classList.add('button--active');
+        let selectValue = event.target.value;
+        botonSaveGallery = botonesGalleryFlex.children[selectValue];
+        cargaImgFlexGallery();
+    }
 }
 
 //Eventos
@@ -185,5 +192,5 @@ botonRight.addEventListener('click', avanzarImagen);
 botonLeft.addEventListener('click', retrocederImagen);
 overlayFooterPlus.addEventListener('click', avanzarImagen);
 overlayFooterPlusLeft.addEventListener('click', retrocederImagen);
-selectGalleryFlex.addEventListener('click',selectOptionGallery);
-selectGalleryFlex.addEventListener('touchstart',selectOptionGallery);
+selectGalleryFlex.addEventListener('click', selectOptionGallery);
+selectGalleryFlex.addEventListener('touchstart', selectOptionGallery);
