@@ -187,4 +187,4 @@ botonLeft.addEventListener('click', retrocederImagen);
 overlayFooterPlus.addEventListener('click', avanzarImagen);
 overlayFooterPlusLeft.addEventListener('click', retrocederImagen);
 selectGalleryFlex.addEventListener('click',selectOptionGallery);
-selectGalleryFlex.addEventListener('touchend',selectOptionGallery);
+selectGalleryFlex.addEventListener('touchstart',selectOptionGallery);
