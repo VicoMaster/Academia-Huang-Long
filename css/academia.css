@@ -16,6 +16,8 @@
 @import url(overlay-gallery-img.css);
 @import url(boton-up.css);
 @import url(whatsapp-button.css);
+@import url(menu-lateral.css);
+
 
 * {
     box-sizing: border-box;

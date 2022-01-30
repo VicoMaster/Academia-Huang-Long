@@ -194,6 +194,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px 30px;
+    cursor: pointer;
 }
 
 .icon-facebook {

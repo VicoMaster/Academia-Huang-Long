@@ -25,6 +25,23 @@
         </div>
     </div>
 
+    <!-- MENU LATERAL -->
+    <div id="boton-lateral-menu" class="background-button-menu menu-lateral--hidden">
+        <div class="boton-burguer-lateral hover-scale icon-hamburguesa"></div>
+    </div>
+    <aside id="menu-lateral" class="menu-lateral menu-lateral--hidden">
+        <div id="button-close-menu" class="button-close-menu overlay__button">
+            <span class="iconify" data-icon="eva:close-outline" style="color: white;" data-width="45"
+                    data-height="45"></span>
+        </div>
+        <ul class="container-buttons">
+            <li class="border-left--yellow"><a class="close-lateral-menu" href="#Inicio">Inicio</a></li>
+            <li class="border-left--red"><a class="close-lateral-menu" href="#Academia">La Academia</a> </li>
+            <li class="border-left--beige"><a class="close-lateral-menu" href="#Clases">Clases</a> </li>
+            <li class="border-left--blue"><a class="close-lateral-menu" href="#Galeria">Galería</a></li>
+        </ul>
+    </aside>
+
     <!-- OVERLAY IMAGEN GALLERY -->
     <section id="container-overlay-gallery" class="container-overlay-gallery overlay--hidden">
         <!-- Central Section -->
@@ -72,9 +89,9 @@
     </section>
 
     <!-- SITIO EN CONSTRUCCION -->
-    <div class="container-construction">
+    <!-- <div class="container-construction">
         <span> &#x26A0; Esta Página Web se encuentra en Construcción</span>
-    </div>
+    </div> -->
 
     <div class="background">
         <div class="dragon_1"></div>
@@ -112,7 +129,7 @@
                     <!-- Barra de iconos top -->
                     <div class="container-icons-top">
                         <div class="container-icons-left">
-                            <div class="icon-banner icon-hamburguesa"></div>
+                            <div id="button-hamburguer" class="icon-banner hover-scale icon-hamburguesa"></div>
                         </div>
                         <div class="container-icons-right">
                             <a href="https://es.wikipedia.org/wiki/%C3%81lvaro_Le%C3%B3n_Medina" target="_blank"
@@ -604,6 +621,8 @@
     <!-- Gallery Image -->
     <script src="js/overlay-gallery-img.js" type="module"></script>
     <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <!-- Menu Lateral -->
+    <script src="js/menu-lateral.js"></script>
 </body>
 
 </html>
