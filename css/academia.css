@@ -13,6 +13,7 @@
 @import url(galeria-videos.css);
 @import url(footer.css);
 @import url(gallery-img.css);
+@import url(overlay-gallery-img.css);
 @import url(boton-up.css);
 @import url(whatsapp-button.css);
 
@@ -43,6 +44,20 @@ body {
     right: 0;
     top: 0;
     z-index: -1;
+}
+
+
+/* AVISO PAGINA EN CONSTRUCCIÓN */
+.container-construction {
+    align-items: center;
+    background: rgb(247, 244, 237);
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 2rem;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
 .container-content {

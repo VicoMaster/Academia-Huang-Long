@@ -96,6 +96,16 @@
     width: 33%;
 }
 
+@media (hover: hover) {
+    .gallery-card:hover {
+        border: 2px solid #E3BA08;
+    }
+
+    .gallery-card:active {
+        transform: scale(0.98);
+    }
+}
+
 .text-help-gallery-img {
     align-items: flex-start;
     display: flex;
@@ -135,9 +145,10 @@
 }
 
 .img-gallery-card {
+    cursor: pointer;
     height: 100%;
-    width: 100%;
     object-fit: cover;
+    width: 100%;
 }
 
 @media (max-width: 1020px) {
@@ -150,10 +161,10 @@
     }
     .controls-gallery-img {
         justify-content: flex-start;
-        width: 28%;
+        width: 32%;
     }
     .tip-gallery-img {
-        width: 72%;
+        width: 68%;
     }
     .container-title-gallery-img {
         margin-bottom: 10px;

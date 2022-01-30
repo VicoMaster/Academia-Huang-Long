@@ -23,6 +23,15 @@
     cursor: pointer;
 }
 
+@media (hover: hover) {
+    .button:hover {
+        border: 2px solid #E3BA08;
+    }
+    .button:active {
+        transform: scale(0.95);
+    }
+}
+
 .button--active {
     background-color: #A49B91;
     border: 2px solid #756B60;

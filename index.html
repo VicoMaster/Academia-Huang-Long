@@ -25,6 +25,57 @@
         </div>
     </div>
 
+    <!-- OVERLAY IMAGEN GALLERY -->
+    <section id="container-overlay-gallery" class="container-overlay-gallery overlay--hidden">
+        <!-- Central Section -->
+        <section class="overlay-contain">
+            <img id="img-overlay" class="overlay__img-overlay" src="" alt="Imagen Seleccionada">
+            <!-- Left Button -->
+            <div id="button-left" class="overlay__button overlay__button--left">
+                <span class="iconify" data-icon="akar-icons:arrow-left" style="color: white;" data-width="45"
+                    data-height="45"></span>
+            </div>
+            <!-- Right Button -->
+            <div id="button-right" class="overlay__button overlay__button--right">
+                <span class="iconify" data-icon="akar-icons:arrow-right" style="color: white;" data-width="45"
+                    data-height="45"></span>
+            </div>
+        </section>
+        <!-- Top Menu -->
+        <nav class="overlay__menu">
+            <!-- Pagination -->
+            <output class="overlay-pagination" name="overlay-result" for="">
+                <span id="overlay_result1">1</span>
+                <span> / </span>
+                <span id="overlay_result2">0</span>
+            </output>
+            <!-- Download Button -->
+            <a href="#" target="_blank" download="" id="button-download"
+                class="overlay__button overlay__button--relative">
+                <span class="iconify" data-icon="akar-icons:download" style="color: white;" data-width="45"
+                    data-height="35"></span>
+            </a>
+            <!-- Close Button -->
+            <div id="overlay-button-close" class="overlay__button overlay__button--relative">
+                <span class="iconify" data-icon="eva:close-outline" style="color: white;" data-width="45"
+                    data-height="45"></span>
+            </div>
+        </nav>
+        <!-- Overlay image Carrusel -->
+        <footer id="overlay-footer" class="overlay-footer">
+            <!-- Bloque de img cargados desde js -->
+        </footer>
+        <div id="overlay-footer-plus" class="overlay-footer__plus"><span>&#x276F;</span></div>
+        <div id="overlay-footer-plus-left" class="overlay-footer__plus overlay-footer__plus--left"><span>&#x276E;</span>
+        </div>
+
+    </section>
+
+    <!-- SITIO EN CONSTRUCCION -->
+    <div class="container-construction">
+        <span> &#x26A0; Esta Página Web se encuentra en Construcción</span>
+    </div>
+
     <div class="background">
         <div class="dragon_1"></div>
         <div class="dragon_2"></div>
@@ -376,7 +427,7 @@
                     </div>
                 </div>
             </div>
-            <!--GALERIA-->
+            <!-- ACADEMY GALLERY -->
             <div id="Galeria" class="central-title">
                 <h1 class="title-academy">
                     <span class="span-title">
@@ -386,20 +437,20 @@
             </div>
             <div class="container-interactive-gallery">
                 <div class="container-gallery-img">
-                    <div class="container-bottons-gallery-img">
-                        <button class="button button--active">La Academia</button>
-                        <button class="button">Nuestro Sifu</button>
-                        <button class="button">Maestros & Practicantes</button>
-                        <button class="button">IWCO Colombia</button>
+                    <div id="container-button-gallery-1" class="container-bottons-gallery-img">
+                        <button id="btn-0" class="button button--active">La Academia</button>
+                        <button id="btn-1" class="button">Nuestro Sifu</button>
+                        <button id="btn-2" class="button">Maestros & Practicantes</button>
+                        <button id="btn-3" class="button">IWCO Colombia</button>
                     </div>
 
                     <div class="container-bottons-gallery-img choice">
                         <select id="select-images" name="Galería"
                             class="select-gallery text-gallery-img text-gallery--bold">
-                            <option selected="selected" value="La Academia">La Academia</option>
-                            <option value="Nuestro Sifu">Nuestro Sifu</option>
-                            <option value="Maestros y Practicantes">Maestros & Practicantes</option>
-                            <option value="IWCO Colombia">IWCO Colombia</option>
+                            <option selected="selected" value="0">La Academia</option>
+                            <option value="1">Nuestro Sifu</option>
+                            <option value="2">Maestros & Practicantes</option>
+                            <option value="3">IWCO Colombia</option>
                         </select>
                     </div>
 
@@ -407,27 +458,29 @@
                         <div class="controls-gallery-img">
                             <img class="arrow-gallery-img" src="img/arrow-left.png" alt="flecha izquierda">
                             <span class="text-gallery-img text-gallery--bold">
-                                1 - 6
+                                <span id="gallery_result1">1</span>
+                                <span> / </span>
+                                <span id="gallery_result2">0</span>
                             </span>
                             <img class="arrow-gallery-img" src="img/arrow-right.png" alt="flecha derecha">
                         </div>
                         <div class="tip-gallery-img">
                             <img class="finger-gallery-img" src="img/hand-touch.png" alt="Dedo deslizando">
                             <span class="text-gallery-img">
-                                Desliza para ver más
+                                Toca para ver más
                             </span>
                         </div>
                     </div>
                     <div class="container-img-gallery">
-                        <div class="container-gallery-cards">
+                        <div id="container-gallery-cards" class="container-gallery-cards">
                             <div id="gallery-card-1" class="gallery-card">
-                                <img class="img-gallery-card" src="img/img-gallery-test-1.jpg" alt="Imagen Card">
+                                <img id="" class="img-gallery-card" src="" alt="Imagen Card">
                             </div>
                             <div id="gallery-card-2" class="gallery-card">
-                                <img class="img-gallery-card" src="img/img-gallery-test-2.jpg" alt="Imagen Card">
+                                <img id="" class="img-gallery-card" src="" alt="Imagen Card">
                             </div>
                             <div id="gallery-card-3" class="gallery-card">
-                                <img class="img-gallery-card" src="img/img-gallery-test-3.jpg" alt="Imagen Card">
+                                <img id="" class="img-gallery-card" src="" alt="Imagen Card">
                             </div>
                         </div>
                     </div>
@@ -520,7 +573,7 @@
     </div>
 
     <!--FOOTER-->
-    <footer>
+    <footer class="footer-page" id="footer-page">
         <div class="container-logos-1">
             <img class="img-logos" src="img/logo_academy.png" alt="Logo Academia">
             <img class="img-logos" src="img/logo-int-chan.png" alt="Logo Instituto Chan">
@@ -531,7 +584,7 @@
                 <p>Barrio Modelia frente al CAI de Policía</p>
                 <p><strong>E-mail:</strong> choylifatleon@yahoo.es</p>
                 <p><strong>Teléfono:</strong> 311 214 4150</p>
-                <p><strong>Academia Huang Long © 2021.</strong></p>
+                <p><strong>Academia Huang Long © 2022.</strong></p>
             </span>
         </div>
         <div class="container-logos-2">
@@ -548,6 +601,9 @@
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <!-- Overlay Load Dragon -->
     <script src="js/load.js"></script>
+    <!-- Gallery Image -->
+    <script src="js/overlay-gallery-img.js" type="module"></script>
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
 </body>
 
 </html>
