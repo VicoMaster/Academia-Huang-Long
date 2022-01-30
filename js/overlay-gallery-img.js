@@ -171,7 +171,6 @@ function retrocederImagen() {
 }
 
 function selectOptionGallery(event){
-    console.log(event.type);
     let selectValue = event.target.value;
     botonSaveGallery = botonesGalleryFlex.children[selectValue];
     cargaImgFlexGallery();
