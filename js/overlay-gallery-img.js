@@ -170,7 +170,8 @@ function retrocederImagen() {
     moverCarrusel();
 }
 
-function test(event){
+function selectOptionGallery(event){
+    console.log(event.type);
     let selectValue = event.target.value;
     botonSaveGallery = botonesGalleryFlex.children[selectValue];
     cargaImgFlexGallery();
@@ -185,4 +186,5 @@ botonRight.addEventListener('click', avanzarImagen);
 botonLeft.addEventListener('click', retrocederImagen);
 overlayFooterPlus.addEventListener('click', avanzarImagen);
 overlayFooterPlusLeft.addEventListener('click', retrocederImagen);
-selectGalleryFlex.addEventListener('click',test);
+selectGalleryFlex.addEventListener('click',selectOptionGallery);
+selectGalleryFlex.addEventListener('touchend',selectOptionGallery);
