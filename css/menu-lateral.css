@@ -4,6 +4,7 @@
     --color-red: rgb(148, 66, 64);
     --color-beige: rgb(164, 155, 145);
     --color-blue: rgb(93, 118, 201);
+    --color-blue-light: rgb(9, 132, 227);
     --color-black: rgba(1,1,1,1);
     --color-white: rgb(255, 255, 255);
     --color-beige-obscure: rgb(120, 110, 99);
@@ -79,6 +80,11 @@ html {
 
 .border-left--blue {
     border-left: .3rem solid var(--color-blue);
+}
+
+.border-left--blue-light {
+    border-left: .3rem solid var(--color-blue-light);
+
 }
 
 .button-close-menu {
