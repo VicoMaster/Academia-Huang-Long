@@ -27,7 +27,10 @@ let contadorImagenesFlex = 0, // Variable que llena el numero de img FLEX
     imagenId = 0, //Id que indica que imagen-small está seleccionada
     nombreImagen = NOMBRE_IMAGEN_DESCARGAR,
     listSelect = selectGalleryFlex.children[0], //Guarda la seleccion menu-lista
-    nodosImg = [];
+    nodosImg = [], // Contenedor de las imagenesFlex
+    touchPixelsMove = 0,
+    movimientoToqueTouch = 0,
+    primerToqueTouch = 0;
 
 //FUNCIONES
 function selecImgFooter(indexImgFooter) {
@@ -195,6 +198,28 @@ function selectOptionGallery(event) {
     }
 }
 
+function galleryMoveOverlay(event) {
+    touchPixelsMove++;
+    movimientoToqueTouch = event.touches[0].clientX;
+}
+
+function galleryMoveOverlayEnd(event) {
+    if (primerToqueTouch > movimientoToqueTouch) {
+        avanzarImagen();
+    }
+    if (primerToqueTouch < movimientoToqueTouch) {
+        retrocederImagen();
+    }
+    centralImg.classList.remove('overlay__img-overlay--scalepress');
+    touchPixelsMove = 0;
+    primerToqueTouch = 0;
+}
+
+function galleryMoveOverlaystart(event) {
+    centralImg.classList.add('overlay__img-overlay--scalepress');
+    primerToqueTouch = event.touches[0].clientX;
+}
+
 //Eventos
 imgGalleryFlex.addEventListener('click', abrirOverlay);
 botonCerrar.addEventListener('click', cerrarOverlay);
@@ -206,6 +231,9 @@ overlayFooterPlus.addEventListener('click', avanzarImagen);
 overlayFooterPlusLeft.addEventListener('click', retrocederImagen);
 selectGalleryFlex.addEventListener('click', selectOptionGallery);
 selectGalleryFlex.addEventListener('touchstart', selectOptionGallery);
+overlayGalleryImg.addEventListener('touchmove', galleryMoveOverlay);
+overlayGalleryImg.addEventListener('touchend', galleryMoveOverlayEnd);
+overlayGalleryImg.addEventListener('touchstart', galleryMoveOverlaystart);
 
 //CARGA DE BLOQUES
 loadDragonOn();
@@ -230,13 +258,6 @@ function loadDragonOff(nodos) {
         loadDragonList[nodos - 1].style.visibility = 'hidden';
     }
     return loadDragonOff(nodos - 1);
-}
-function loadDragonOffAll() {
-    loadDragonList.forEach(loadDragon => {
-        loadDragon.style.zIndex = '-1';
-        loadDragon.style.opacity = '0';
-        loadDragon.style.visibility = 'hidden';
-    });
 }
 function loadDragonCenterOn() {
     loadDragonCenter.style.zIndex = '998';
