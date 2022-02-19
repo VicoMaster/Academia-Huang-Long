@@ -98,6 +98,7 @@ function abrirOverlay(event) {
         overlayResult1.innerText = (parseInt(imagenId, 10) + 1);
         centralImg.src = PACK_IMAGENES[botonSaveGallery.id][0][imagenId];
         overlayGalleryImg.classList.toggle('overlay--hidden');
+        loadDragonCenterOn();
         centralImg.onload = loadDragonCenterOff;
         cargaCarruselOverlay();
         selecImgFooter(imagenId);
