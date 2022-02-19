@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url(menu.css);
+@import url(load-dragon.css);
 
 .container-interactive-gallery {
     align-items: center;
@@ -109,6 +110,8 @@
     margin-left: 5px;
     margin-right: 5px;
     width: 33%;
+    height: 380px;
+    position: relative;
 }
 
 @media (hover: hover) {
@@ -155,32 +158,41 @@
     .container-interactive-gallery {
         height: 98vh;
     }
+
     .container-gallery-img {
         height: 100%;
         width: 100%;
     }
+
     .controls-gallery-img {
         justify-content: flex-start;
         width: 32%;
     }
+
     .tip-gallery-img {
         width: 68%;
     }
+
     .container-title-gallery-img {
         margin-bottom: 10px;
     }
+
     .container-bottons-gallery-img {
         display: none;
     }
+
     .choice {
         display: block;
     }
-    .container-gallery-cards :nth-child(2), .container-gallery-cards :nth-child(3) {
+
+    .card-2, .card-3 {
         display: none;
     }
-    .container-gallery-cards :nth-child(1) {
+
+    .card-1 {
         width: 100%;
     }
+
     .gallery-card {
         margin: 0;
     }

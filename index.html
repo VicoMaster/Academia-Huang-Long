@@ -32,14 +32,15 @@
     <aside id="menu-lateral" class="menu-lateral menu-lateral--hidden">
         <div id="button-close-menu" class="button-close-menu overlay__button">
             <span class="iconify" data-icon="eva:close-outline" style="color: white;" data-width="45"
-                    data-height="45"></span>
+                data-height="45"></span>
         </div>
         <ul class="container-buttons">
             <li class="border-left--yellow"><a class="close-lateral-menu" href="#Inicio">Inicio</a></li>
             <li class="border-left--red"><a class="close-lateral-menu" href="#Academia">La Academia</a> </li>
             <li class="border-left--beige"><a class="close-lateral-menu" href="#Clases">Clases</a> </li>
             <li class="border-left--blue"><a class="close-lateral-menu" href="#Galeria">Galería</a></li>
-            <li class="border-left--blue-light"><a target="_blank" class="close-lateral-menu" href="https://vicomaster.github.io/tasa_paypal/">Tasa Paypal</a></li>
+            <li class="border-left--blue-light"><a target="_blank" class="close-lateral-menu"
+                    href="https://vicomaster.github.io/tasa_paypal/">Tasa Paypal</a></li>
         </ul>
     </aside>
 
@@ -47,6 +48,15 @@
     <section id="container-overlay-gallery" class="container-overlay-gallery overlay--hidden">
         <!-- Central Section -->
         <section class="overlay-contain">
+            <!-- START LOAD DRAGON -->
+            <div id="overlay-load-center" class="overlay-load-center">
+                <div class="container-loader">
+                    <div class="circle"></div>
+                    <div class="load-dragon"></div>
+                    <span class="text-load">CARGANDO</span>
+                </div>
+            </div>
+            <!-- END LOAD DRAGON -->
             <img id="img-overlay" class="overlay__img-overlay" src="" alt="Imagen Seleccionada">
             <!-- Left Button -->
             <div id="button-left" class="overlay__button overlay__button--left">
@@ -485,26 +495,53 @@
                         <div class="tip-gallery-img">
                             <img class="finger-gallery-img" src="img/hand-touch.png" alt="Dedo deslizando">
                             <span class="text-gallery-img">
-                                Toca para ver más
+                                Pulsa la imagen para ver más
                             </span>
                         </div>
                     </div>
                     <div class="container-img-gallery">
                         <div id="container-gallery-cards" class="container-gallery-cards">
-                            <div id="gallery-card-1" class="gallery-card">
+                            <div id="gallery-card-1" class="gallery-card card-1">
                                 <img id="" class="img-gallery-card" src="" alt="Imagen Card">
+                                <!-- START LOAD DRAGON -->
+                                <div id="overlay-load-1" class="overlay-load-img">
+                                    <div class="container-loader">
+                                        <div class="circle"></div>
+                                        <div class="load-dragon"></div>
+                                        <span class="text-load">CARGANDO</span>
+                                    </div>
+                                </div>
+                                <!-- END LOAD DRAGON -->
                             </div>
-                            <div id="gallery-card-2" class="gallery-card">
+                            <div id="gallery-card-2" class="gallery-card card-2">
                                 <img id="" class="img-gallery-card" src="" alt="Imagen Card">
+                                <!-- START LOAD DRAGON -->
+                                <div id="overlay-load-2" class="overlay-load-img">
+                                    <div class="container-loader">
+                                        <div class="circle"></div>
+                                        <div class="load-dragon"></div>
+                                        <span class="text-load">CARGANDO</span>
+                                    </div>
+                                </div>
+                                <!-- END LOAD DRAGON -->
                             </div>
-                            <div id="gallery-card-3" class="gallery-card">
+                            <div id="gallery-card-3" class="gallery-card card-3">
                                 <img id="" class="img-gallery-card" src="" alt="Imagen Card">
+                                <!-- START LOAD DRAGON -->
+                                <div id="overlay-load-3" class="overlay-load-img">
+                                    <div class="container-loader">
+                                        <div class="circle"></div>
+                                        <div class="load-dragon"></div>
+                                        <span class="text-load">CARGANDO</span>
+                                    </div>
+                                </div>
+                                <!-- END LOAD DRAGON -->
                             </div>
                         </div>
                     </div>
                     <div class="text-help-gallery-img">
                         <span class="text-gallery-img">
-                            Toca la imagen para agrandar
+                            Pulsa la imagen para agrandar
                         </span>
                     </div>
                 </div>

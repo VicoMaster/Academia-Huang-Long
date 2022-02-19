@@ -16,7 +16,9 @@ let overlayGalleryImg = document.getElementById('container-overlay-gallery'),
     overlayFooterPlus = document.getElementById('overlay-footer-plus'),
     overlayFooterPlusLeft = document.getElementById('overlay-footer-plus-left'),
     selectGalleryFlex = document.getElementById('select-images'),
-    galleryResult2 = document.getElementById('gallery_result2');
+    galleryResult2 = document.getElementById('gallery_result2'),
+    loadDragonList = document.querySelectorAll('.overlay-load-img'),
+    loadDragonCenter = document.getElementById('overlay-load-center');
 
 //VARIABLES GLOBALES
 let contadorImagenesFlex = 0, // Variable que llena el numero de img FLEX
@@ -24,11 +26,8 @@ let contadorImagenesFlex = 0, // Variable que llena el numero de img FLEX
     idImagenGallery = 0, //contador para saber el id de la imagen en la galería flex
     imagenId = 0, //Id que indica que imagen-small está seleccionada
     nombreImagen = NOMBRE_IMAGEN_DESCARGAR,
-    listSelect = selectGalleryFlex.children[0]; //Guarda la seleccion menu-lista
-
-//CARGA DE BLOQUES
-cargaImgFlexGallery();
-listSelect.classList.add('button--active');
+    listSelect = selectGalleryFlex.children[0], //Guarda la seleccion menu-lista
+    nodosImg = [];
 
 //FUNCIONES
 function selecImgFooter(indexImgFooter) {
@@ -53,6 +52,7 @@ function cargaImgFlexGallery() {
     galleryResult2.innerText = PACK_IMAGENES[botonSaveGallery.id][0].length;
     contadorImagenesFlex = 0;
     idImagenGallery = 0;
+    nodosImg = [];
     //Carga Imagenes en Galería Flex
     imgGalleryFlex.childNodes.forEach(containerImg => {
         containerImg.childNodes.forEach(nodo => {
@@ -61,9 +61,11 @@ function cargaImgFlexGallery() {
                 nodo.id = 'glc-' + idImagenGallery;
                 contadorImagenesFlex++;
                 idImagenGallery++;
+                nodosImg.push(nodo);
             }
         });
-    })
+    });
+    loadDragonOff(nodosImg.length);
 }
 
 function cargaCarruselOverlay() {
@@ -84,6 +86,7 @@ function actionButtonGallery(event) {
         botonSaveGallery.classList.remove('button--active');
         event.target.classList.add('button--active');
         botonSaveGallery = event.target;
+        loadDragonOn();
         cargaImgFlexGallery();
     }
 }
@@ -95,6 +98,7 @@ function abrirOverlay(event) {
         overlayResult1.innerText = (parseInt(imagenId, 10) + 1);
         centralImg.src = PACK_IMAGENES[botonSaveGallery.id][0][imagenId];
         overlayGalleryImg.classList.toggle('overlay--hidden');
+        centralImg.onload = loadDragonCenterOff;
         cargaCarruselOverlay();
         selecImgFooter(imagenId);
         imgDownload(centralImg.src, changeNameImg());
@@ -106,6 +110,7 @@ function cerrarOverlay() {
     centralImg.src = '';
     eliminarCarruselOverlay();
     overlayGalleryImg.classList.toggle('overlay--hidden');
+    loadDragonCenterOff();
 }
 
 function moverCarrusel() {
@@ -141,6 +146,8 @@ function cambiarImagenCentral(event) {
         removeSelectedFooter(imagenId);
         imagenId = event.target.id;
         centralImg.src = PACK_IMAGENES[botonSaveGallery.id][0][imagenId];
+        loadDragonCenterOn();
+        centralImg.onload = loadDragonCenterOff;
         selecImgFooter(imagenId);
         imgDownload(centralImg.src, changeNameImg());
         overlayResult1.innerText = (parseInt(imagenId, 10) + 1);
@@ -155,6 +162,8 @@ function avanzarImagen() {
     imagenId = indexNextImg;
     selecImgFooter(imagenId);
     centralImg.src = PACK_IMAGENES[botonSaveGallery.id][0][imagenId];
+    loadDragonCenterOn();
+    centralImg.onload = loadDragonCenterOff;
     imgDownload(centralImg.src, changeNameImg());
     paginationCounter(false);
     moverCarrusel();
@@ -167,6 +176,8 @@ function retrocederImagen() {
     imagenId = indexBackImg;
     selecImgFooter(imagenId);
     centralImg.src = PACK_IMAGENES[botonSaveGallery.id][0][imagenId];
+    loadDragonCenterOn();
+    centralImg.onload = loadDragonCenterOff;
     imgDownload(centralImg.src, changeNameImg());
     paginationCounter(true);
     moverCarrusel();
@@ -194,3 +205,45 @@ overlayFooterPlus.addEventListener('click', avanzarImagen);
 overlayFooterPlusLeft.addEventListener('click', retrocederImagen);
 selectGalleryFlex.addEventListener('click', selectOptionGallery);
 selectGalleryFlex.addEventListener('touchstart', selectOptionGallery);
+
+//CARGA DE BLOQUES
+loadDragonOn();
+cargaImgFlexGallery();
+listSelect.classList.add('button--active');
+
+//LOAD DRAGON
+//Oculta el overlay load-dragon cuando el componente target ha terminado de cargar
+function loadDragonOn() {
+    loadDragonList.forEach(loadDragon => {
+        loadDragon.style.zIndex = '998';
+        loadDragon.style.opacity = '1';
+        loadDragon.style.visibility = 'visible';
+    });
+}
+function loadDragonOff(nodos) {
+    if (nodos <= 0) return
+    let imgFlexHtml = nodosImg[nodos - 1];
+    imgFlexHtml.onload = () => {
+        loadDragonList[nodos - 1].style.zIndex = '-1';
+        loadDragonList[nodos - 1].style.opacity = '0';
+        loadDragonList[nodos - 1].style.visibility = 'hidden';
+    }
+    return loadDragonOff(nodos - 1);
+}
+function loadDragonOffAll() {
+    loadDragonList.forEach(loadDragon => {
+        loadDragon.style.zIndex = '-1';
+        loadDragon.style.opacity = '0';
+        loadDragon.style.visibility = 'hidden';
+    });
+}
+function loadDragonCenterOn() {
+    loadDragonCenter.style.zIndex = '998';
+    loadDragonCenter.style.opacity = '1';
+    loadDragonCenter.style.visibility = 'visible';
+}
+function loadDragonCenterOff() {
+    loadDragonCenter.style.zIndex = '-1';
+    loadDragonCenter.style.opacity = '0';
+    loadDragonCenter.style.visibility = 'hidden';
+}
