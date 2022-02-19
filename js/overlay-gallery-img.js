@@ -203,16 +203,18 @@ function galleryMoveOverlay(event) {
     movimientoToqueTouch = event.touches[0].clientX;
 }
 
-function galleryMoveOverlayEnd(event) {
-    if (primerToqueTouch > movimientoToqueTouch) {
-        avanzarImagen();
+function galleryMoveOverlayEnd() {
+    if (touchPixelsMove > 10) {
+        if (primerToqueTouch > movimientoToqueTouch) {
+            avanzarImagen();
+        }
+        if (primerToqueTouch < movimientoToqueTouch) {
+            retrocederImagen();
+        }
     }
-    if (primerToqueTouch < movimientoToqueTouch) {
-        retrocederImagen();
-    }
-    centralImg.classList.remove('overlay__img-overlay--scalepress');
     touchPixelsMove = 0;
     primerToqueTouch = 0;
+    centralImg.classList.remove('overlay__img-overlay--scalepress');
 }
 
 function galleryMoveOverlaystart(event) {
@@ -250,6 +252,7 @@ function loadDragonOn() {
     });
 }
 function loadDragonOff(nodos) {
+    //recursive function
     if (nodos <= 0) return
     let imgFlexHtml = nodosImg[nodos - 1];
     imgFlexHtml.onload = () => {

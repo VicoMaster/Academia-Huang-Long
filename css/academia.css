@@ -93,6 +93,22 @@ body {
     width: 323px;
 }
 
+.split-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 5rem;
+    width: 100%;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    background: rgba(174, 7, 33, .5);
+}
+
+.split-section span {
+    margin: 0 1rem;
+}
+
 @media (max-width: 1020px) {
     .dragon_1 {
         transform: scaleX(-1) rotate(20deg);
