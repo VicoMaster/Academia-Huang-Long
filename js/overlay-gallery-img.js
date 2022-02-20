@@ -204,7 +204,7 @@ function galleryMoveOverlay(event) {
 }
 
 function galleryMoveOverlayEnd() {
-    if (touchPixelsMove > 10) {
+    if (touchPixelsMove > 5) {
         if (primerToqueTouch > movimientoToqueTouch) {
             avanzarImagen();
         }
