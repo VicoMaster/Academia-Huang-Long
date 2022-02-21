@@ -1,6 +1,6 @@
 let expireTime = setInterval(hiddenLoadDragon,1000);
 let conteo = 0; //Cuando el conteo llegue a 6 cancela el logo de carga
-
+window.location.href = "#Inicio"; // Fix para las referencias
 window.onload = () => {
     pantalla_carga = document.getElementById('overlay-load');
     pantalla_carga.style.visibility = 'hidden';
@@ -15,5 +15,4 @@ function hiddenLoadDragon(){
         pantalla_carga.style.opacity = '0';  
         clearInterval(expireTime);
     }
-    console.log("CONTEO: ",conteo);
 }

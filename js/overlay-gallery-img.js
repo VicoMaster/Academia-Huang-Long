@@ -115,6 +115,7 @@ function cerrarOverlay() {
     eliminarCarruselOverlay();
     overlayGalleryImg.classList.toggle('overlay--hidden');
     loadDragonCenterOff();
+    window.location.href = "#Galeria";
 }
 
 function moverCarrusel() {
