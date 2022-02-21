@@ -242,13 +242,18 @@ html {
 }
 
 /*Esta MediaQuery arregla la vista cuando el dispositivo esta horizontal y pantallas más altas*/
+@media (max-height: 920px) {
+    .overlay-footer__plus span {
+        line-height: 5rem;
+        padding-top: 50%;
+    }
+}
 @media (max-height: 850px) {
     .overlay-footer__plus span {
         line-height: 5rem;
         padding-top: 50%;
     }
 }
-
 @media (max-height: 740px) {
     .overlay-footer__plus span {
         line-height: 5rem;

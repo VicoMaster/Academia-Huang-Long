@@ -120,18 +120,43 @@ function cerrarOverlay() {
 function moverCarrusel() {
     let totalWidthCarrusel = 0,
         continuarSumar = true,
-        marginElementoImg = -15; // No tengo idea por qué este numero pero funciona
+        spacingBox = 0,
+        ultimoElementoClientX = 0, //Position en X de la imagen target en carrusel
+        tamannoOverlayScreen = overlayGalleryImg.offsetWidth / 2,
+        numeroDesconocidoPeroFunciona = 4, //Falta sumar este numero que no se de donde sale
+        contadorElementosImg = 0; //Cuenta los elementos para saber el index actual
+
     footerCarrusel.childNodes.forEach(elemento => {
+        //CALCULO PARA DESLIZAR LA CINTA DE IMAGENES-SMALL
         if (elemento.nodeName === 'IMG') {
-            if (continuarSumar) totalWidthCarrusel += (elemento.width + marginElementoImg);
+            if (continuarSumar) {
+                //Rescatamos Margenes, padding y border para calculo preciso
+                const PADDING = window.getComputedStyle(elemento, null).getPropertyValue('padding-left');
+                const MARGIN = window.getComputedStyle(elemento, null).getPropertyValue('margin-left');
+                const BORDER = window.getComputedStyle(elemento, null).getPropertyValue('border-left');
+                const bordeBox = parseInt((BORDER.split('px', 1))[0], 10);
+                const marginBox = parseInt((MARGIN.split('px', 1))[0], 10);
+                const paddingBox = parseInt((PADDING.split('px', 1))[0]);
+                spacingBox = bordeBox + marginBox + paddingBox + numeroDesconocidoPeroFunciona;
+                totalWidthCarrusel += (elemento.width + spacingBox);
+                //Rescatamos la posición del elemento en pantalla
+                const clientReact = elemento.getBoundingClientRect();
+                ultimoElementoClientX = clientReact.left;
+                contadorElementosImg++;
+            }
+            //Avanza hasta el elemento con la clase selected
             if (elemento.classList.item(0)) {
-                totalWidthCarrusel -= (elemento.width - marginElementoImg);
+                totalWidthCarrusel -= (elemento.width - spacingBox);
                 continuarSumar = false;
             }
         }
     });
-    if (totalWidthCarrusel < 0) totalWidthCarrusel -= totalWidthCarrusel; //fix nomovecarrusel
+
+    //Mueve carrusel despues de calculos
+    totalWidthCarrusel -= tamannoOverlayScreen; //Le resta la mitad de la pantalla
+    if (totalWidthCarrusel < 0) totalWidthCarrusel -= totalWidthCarrusel; //fix nomovecarrusel for negative
     footerCarrusel.style.transform = `translateX(-${totalWidthCarrusel}px)`;
+
 }
 
 function paginationCounter(retroceder) {
@@ -204,7 +229,7 @@ function galleryMoveOverlay(event) {
 }
 
 function galleryMoveOverlayEnd() {
-    if (touchPixelsMove > 5) {
+    if (touchPixelsMove > 2) {
         if (primerToqueTouch > movimientoToqueTouch) {
             avanzarImagen();
         }
