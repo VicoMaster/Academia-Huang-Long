@@ -13,7 +13,7 @@ window.onload = () => {
 function hiddenLoadDragon() {
     conteo++
     if (conteo > 6) {
-        pantalla_carga = document.getElementById('overlay-load');
+        let pantalla_carga = document.getElementById('overlay-load');
         pantalla_carga.style.visibility = 'hidden';
         pantalla_carga.style.opacity = '0';
         clearInterval(expireTime);
