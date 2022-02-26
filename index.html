@@ -10,8 +10,14 @@
     <meta name="keywords" content="kung fu, wushu, artes marciales, alvaro leon, choy lee fut, tai chi, wing chun">
     <meta name="author" content="Andres F. Rivera">
     <link rel="shortcut icon" href="img/dragon_logo.ico" type="image/x-icon">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/overlay-load.css">
     <link rel="stylesheet" href="css/academia.css">
+    <!-- GOOGLE FONT - MONTSERRAT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- font-family: 'Montserrat', sans-serif; -->
     <title>Academia Huang Long</title>
 </head>
 
@@ -109,11 +115,13 @@
         <div class="dragon_1"></div>
         <div class="dragon_2"></div>
         <div class="container-content">
-            <!--BANNER-->
+
+            <!--ANTIGUO BANNER DEL BANNER, SE CAMBIA POR UNO MEJOR
+            BANNER
             <div class="container">
                 <div id="Inicio" class="banner">
-                    <!-- Barra de Flechas -->
-                    <!-- SE COMENTAREA POR DESUSO 
+                    Barra de Flechas
+                    SE COMENTAREA POR DESUSO
                     <div class="banner-bar">
                         <div class="container-arrow hover-scale">
                             <span class="iconify" data-icon="bx:bx-left-arrow" style="color: #e3ba08;"
@@ -124,8 +132,7 @@
                                 data-height="40"></span>
                         </div>
                     </div>
-                    -->
-                    <!-- Barra de texto -->
+                    Barra de texto
                     <div id="text-bar" class="text-bar text-bar-1 animation-text">
                         <h3>DISCIPLINA, RESPETO Y TRADICI&Oacute;N</h3>
                     </div>
@@ -138,7 +145,7 @@
                     <div id="text-bar" class="text-bar text-bar-4 animation-text">
                         <h3>LEGADO INMORTAL</h3>
                     </div>
-                    <!-- Barra de iconos top -->
+                    Barra de iconos top
                     <div class="container-icons-top">
                         <div class="container-icons-left">
                             <div id="button-hamburguer" class="icon-banner hover-scale icon-hamburguesa"></div>
@@ -152,7 +159,7 @@
                                 class="icon-banner icon-facebook hover-scale"></a>
                         </div>
                     </div>
-                    <!-- Barra de iconos bot -->
+                    Barra de iconos bot
                     <div class="container-icons-bot">
                         <div id="icon-circle" class="icon-banner icon-circle circle-1"></div>
                         <div id="icon-circle" class="icon-banner icon-circle circle-2"></div>
@@ -165,6 +172,96 @@
                     </div>
                 </div>
             </div>
+            -->
+
+            <!-- BANNER MEJORADO -->
+            <div id="Inicio" class="container-banner">
+                <div class="container-slider">
+                    <!-- ARROWS -->
+                    <div id="left-arrow" class="container__arrow bar--left">
+                        <span class="iconify" data-icon="akar-icons:chevron-left" style="color: white;"
+                            data-width="50"></span>
+                    </div>
+                    <div id="right-arrow" class="container__arrow bar--right">
+                        <span class="iconify" data-icon="akar-icons:chevron-right" style="color: white;"
+                            data-width="50"></span>
+                    </div>
+                    <!-- TOP BAR -->
+                    <div class="banner-bar banner-top">
+                        <div class="container-icons-left">
+                            <div id="button-hamburguer" class="icon-banner hover-scale icon-hamburguesa"></div>
+                        </div>
+                        <div class="container-icons-right">
+                            <a href="https://es.wikipedia.org/wiki/%C3%81lvaro_Le%C3%B3n_Medina" target="_blank"
+                                class="icon-banner icon-wiki hover-scale"></a>
+                            <a href="https://www.youtube.com/channel/UCvkQ-3MTtz6fcaL7xlgh63Q" target="_blank"
+                                class="icon-banner icon-youtube hover-scale"></a>
+                            <a href="https://www.facebook.com/academiahuanlong" target="_blank"
+                                class="icon-banner icon-facebook hover-scale"></a>
+                        </div>
+                    </div>
+                    <!-- BOTTOM BAR -->
+                    <div class="banner-bar banner-bottom"></div>
+                    <div id="overlay-banner" class="overlay-banner"></div>
+                    <div class="slider" id="slider">
+                        <div class="slider__section">
+                            <div class="container-text-img">
+                                <!-- Barra de texto -->
+                                <div id="text-bar" class="text-bar">
+                                    <h3>DISCIPLINA, RESPETO Y TRADICI&Oacute;N</h3>
+                                </div>
+                                <img src="" alt="" class="slider__img section-img">
+                            </div>
+                        </div>
+                        <div class="slider__section">
+                            <div class="container-text-img">
+                                <!-- Barra de texto -->
+                                <div id="text-bar" class="text-bar">
+                                    <h3>LINAJE DE GRANDES MAESTROS</h3>
+                                </div>
+                                <img src="" alt="" class="slider__img section-img">
+                            </div>
+                        </div>
+                        <div class="slider__section">
+                            <div class="container-text-img">
+                                <!-- Barra de texto -->
+                                <div id="text-bar" class="text-bar">
+                                    <h3>ENSEÑANZAS ANCESTRALES</h3>
+                                </div>
+                                <img src="" alt="" class="slider__img section-img">
+                            </div>
+                        </div>
+                        <div class="slider__section">
+                            <div class="container-text-img">
+                                <!-- Barra de texto -->
+                                <div id="text-bar" class="text-bar">
+                                    <h3>LEGADO INMORTAL</h3>
+                                </div>
+                                <img src="" alt="" class="slider__img section-img">
+                            </div>
+                        </div>
+                        <div class="slider__section">
+                            <div class="container-text-img">
+                                <!-- Barra de texto -->
+                                <div style="opacity: 0; visibility: hidden;" id="text-bar" class="text-bar">
+                                    <h3>TEXTO DEL BANNER</h3>
+                                </div>
+                                <img src="" alt="" class="slider__img section-img">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROGRESS -->
+                    <div id="container-progress" class="container-progress__bar">
+                        <div id="pgb-1" class="progress__bar"></div>
+                        <div id="pgb-2" class="progress__bar"></div>
+                        <div id="pgb-3" class="progress__bar"></div>
+                        <div id="pgb-4" class="progress__bar"></div>
+                        <div id="pgb-5" class="progress__bar"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /BANNER MEJORADO -->
+
             <!--TITULOS Y ENLACES-->
             <div class="central-title">
                 <h1 class="title-academy">
@@ -728,17 +825,20 @@
 
     <!--JS-->
     <script src="js/go-top.js"></script>
-    <!-- Boton pausa -->
+    <!-- BANNER NUEVO -->
+    <script type="module" src="js/banner-auto-manual.js"></script>
+    <!-- BANNER ANTIGUO
     <script src="js/banner-pause.js"></script>
-    <!-- Api icono para el banner ICONIFY -->
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    -->
     <!-- Overlay Load Dragon -->
-    <script src="js/load.js"></script>
+    <script type="module" src="js/load.js"></script>
     <!-- Gallery Image -->
     <script src="js/overlay-gallery-img.js" type="module"></script>
-    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
     <!-- Menu Lateral -->
     <script src="js/menu-lateral.js"></script>
+    <!-- ICONIFY -->
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color-background-arrow: rgba(111, 111, 111, .8);
+    --color-background-progress: rgba(255, 255, 255, .4);
+    --color-background-border: rgb(227, 186, 8);
+    --color-background-banner-bar: rgba(0, 0, 0, 0.5);
+    --color-opacity: rgba(255, 255, 255, .01);
+    --color-background-textbar: rgba(150, 150, 150, 0.7);
+    /* Z-INDEX */
+    --position-z-icon-burguer: 1000;
+    --position-z-arrows: 999;
+    --position-z-progress: 1001;
+    --position-z-overlay: 997;
+    --position-z-banner-bar: 1000;
+    /*ICONOS*/
+    --icon-hamburguer: url(../img/icon-hamburguesa.png);
+    --icon-facebook: url(../img/logo-facebook.png);
+    --icon-youtube: url(../img/icon-youtube.png);
+    --icon-wiki: url(../img/icon_wiki.png);
+    /*LOGOS*/
+    --logo-academy: url(../img/logo_academy.png);
+    --logo-fcdw: url(../img/logo_fcdw.png);
+}
+
+.container-banner {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+/*BARRA DE TEXTO - Top por performance*/
+.container-text-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.text-bar {
+    align-items: center;
+    background: var(--color-background-textbar);
+    bottom: 4rem;
+    color: white;
+    display: flex;
+    font-size: 2rem;
+    height: 5rem;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in;
+    width: 100%;
+}
+
+.container-slider {
+    border: 1rem solid var(--color-background-border);
+    height: 43rem;
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    width: 98rem;
+    box-shadow: 0px 19px 22px 0px #A49B91, 0px 50px 250px 0px rgb(164, 155, 145, 0.7) inset;
+}
+
+/*CONTENEDOR DE ICONOS SUPERIOR*/
+.banner-bar {
+    align-items: center;
+    background: var(--color-background-banner-bar);
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    justify-content: space-between;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: var(--position-z-banner-bar);
+
+}
+
+.container-icons-right, .container-icons-left {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 50%;
+}
+
+.container-icons-right {
+    flex-direction: row-reverse;
+}
+
+.icon-hamburguesa {
+    background-image: var(--icon-hamburguer);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+.icon-banner {
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+
+@media (hover: hover) {
+    .hover-scale:hover {
+        transform: scale(1.1);
+    }
+
+    .hover-scale:active {
+        transform: scale(.95);
+    }
+}
+
+.icon-hamburguesa {
+    background-image: var(--icon-hamburguer);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+.icon-facebook {
+    background-image: var(--icon-facebook);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+.icon-youtube {
+    background-image: var(--icon-youtube);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px 30px;
+}
+
+.icon-wiki {
+    background-image: var(--icon-wiki);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+/* LOGOS BOTTOM BAR */
+.banner-bottom::before {
+    background-image: var(--logo-academy);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65px 65px;
+    bottom: 0;
+    content: "";
+    height: 70px;
+    left: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    position: absolute;
+    width: 70px;
+}
+
+.banner-bottom::after {
+    background-image: var(--logo-fcdw);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65px 65px;
+    bottom: 0;
+    content: "";
+    height: 70px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    position: absolute;
+    right: 0;
+    width: 70px;
+}
+
+
+.banner-top {
+    top: 0;
+}
+
+.banner-bottom {
+    bottom: 0;
+}
+
+.overlay-banner {
+    width: 100%;
+    height: 100%;
+    background: var(--color-opacity);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--position-z-overlay);
+}
+
+.slider {
+    height: 100%;
+    width: 500%;
+    display: flex;
+    transition: all .3s ease-out
+}
+
+.slider__section {
+    height: 100%;
+    width: 20%;
+}
+
+.slider__img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.container__arrow {
+    align-items: center;
+    background: var(--color-background-arrow);
+    cursor: pointer;
+    display: flex;
+    height: 15%;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    transition: all 150ms ease-out;
+    width: 6rem;
+    margin: 0 1rem;
+    z-index: var(--position-z-arrows);
+    border-radius: 2.5rem;
+}
+
+.container__arrow:hover {
+    transform: scale(1.1);
+}
+
+.bar--left {
+    left: 0;
+}
+
+.bar--left:active {
+    transform: translateX(-1rem);
+}
+
+.bar--right {
+    right: 0;
+}
+
+.bar--right:active {
+    transform: translateX(1rem);
+}
+
+.container-progress__bar {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: var(--position-z-progress);
+}
+
+.progress__bar {
+    background: var(--color-background-progress);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 1.5rem;
+    margin: 10px;
+    transition: all 100ms ease-out;
+    width: 10rem;
+}
+
+.progress__bar:hover {
+    transform: scale(1.1);
+}
+
+.progress__bar:active {
+    transform: scale(.95);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1020px) {
+    .banner-bottom::before {
+        display: none;
+    }
+
+    .banner-bottom::after {
+        display: none;
+    }
+
+    .container-slider {
+        box-shadow: none;
+        height: 50rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /*Fix Responsive mobile*/
+    .container__arrow:hover {
+        transform: scale(1);
+    }
+
+    .progress__bar:hover {
+        transform: scale(1);
+    }
+
+    .progress__bar {
+        width: 3rem;
+    }
+
+    .text-bar {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .container-slider {
+        height: 45rem;
+    }
+    .container__arrow {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
