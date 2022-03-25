@@ -65,7 +65,7 @@ html {
 }
 
 .container-slider {
-    border: 1rem solid var(--color-background-border);
+    border: .5rem solid var(--color-background-border);
     height: 43rem;
     margin: 1rem;
     overflow: hidden;
