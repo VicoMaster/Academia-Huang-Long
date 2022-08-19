@@ -156,6 +156,12 @@ html {
     background-size: 30px 30px;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 /* LOGOS BOTTOM BAR */
 .banner-bottom::before {
     background-image: var(--logo-academy);
@@ -336,5 +342,11 @@ html {
     .container__arrow {
         opacity: 0;
         visibility: hidden;
+    }
+    .container-icons-left{
+        width: 30%
+    }
+    .container-icons-right{
+        width: 70%
     }
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/academia.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/miembros.css">
+    <title>Academia Huang Long</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="dragon_1 dmiembros"></div>
+        <div class="dragon_2 dmiembros"></div>
+        <div class="container-content">
+            <section class="container-miembros">
+                <main class="background-mobile noMobile">
+                    <div class="menu show-logo">
+                        <a href="../index.html">
+                            <div class="logo-dragon"></div>
+                        </a>
+                        <a href="../index.html" class="link-inicio">Inicio</a>
+                    </div>
+                    <h4 class="title-central">Consulta de Miembros</h4>
+                    <!--INPUT-->
+                    <div class="container-input">
+                        <input id="input_member" class="generic__input input--grey shadow--neumorphism-inset"
+                            type="number" placeholder="Cod. Miembro" autofocus>
+                    </div>
+                    <button id="button_consultar" class="button">Consultar</button>
+                    <!-- Carnet -->
+                    <article id="carnet" class="carnet">
+                        <header id="header-carnet" class="header-carnet">
+                            <div id="contenedor-drop" class="contenedor-drop">
+                                <div class="drop">
+                                    <iconify-icon icon="ci:chevron-big-up" width="35" height="35"></iconify-icon>
+                                </div>
+                            </div>
+                            <h4 class="title-header title-central">Carnet</h4>
+                        </header>
+                        <section class="content-carnet">
+                            <section class="carnet-col-img">
+                                <img src="../img/sifu_carnet.jpg" alt="Imágen de Carnet">
+                                <span class="span-code">Cod. 10001</span>
+                                <span class="span-liga">Maestro</span>
+                                <span class="span-liga">Liga Bogotá</span>
+                            </section>
+                            <section class="carnet-col-content">
+                                <span class="span-name">Sifu Álvaro León Medina</span>
+                                <span class="span-content">Grado: Negro 7° Dan</span>
+                                <span class="span-content">Club: Huang Long</span>
+                                <span class="span-content">Suscripción: Activa</span>
+                            </section>
+                        </section>
+                    </article>
+                </main>
+                <!-- VISTA FULLVIEW -->
+                <main class="background-fv noFullView">
+                    <div class="menu show-logo">
+                        <a href="../index.html">
+                            <div class="logo-dragon"></div>
+                        </a>
+                        <a href="../index.html" class="link-inicio">Inicio</a>
+                    </div>
+                    <h4 class="title-central">Consulta de Miembros</h4>
+                    <!--INPUT-->
+                    <div class="container-input">
+                        <input id="input_member" class="generic__input input--grey shadow--neumorphism-inset"
+                            type="number" placeholder="Cod. Miembro" autofocus>
+                    </div>
+                    <button id="button_consultar" class="button">Consultar</button>
+                    <!-- Carnet -->
+                    <article id="carnet" class="carnet-fv">
+                        <header id="header-carnet" class="header-carnet">
+                            <div id="contenedor-drop" class="contenedor-drop noMobile">
+                                <div class="drop">
+                                    <iconify-icon icon="ci:chevron-big-up" width="35" height="35"></iconify-icon>
+                                </div>
+                            </div>
+                            <h4 class="title-header title-central">Carnet</h4>
+                        </header>
+                        <section class="content-carnet">
+                            <section class="carnet-col-img">
+                                <img src="../img/sifu_carnet.jpg" alt="Imágen de Carnet">
+                                <span class="span-code">Cod. 10001</span>
+                                <span class="span-liga">Maestro</span>
+                                <span class="span-liga">Liga Bogotá</span>
+                            </section>
+                            <section class="carnet-col-content">
+                                <span class="span-name">Sifu Álvaro León Medina</span>
+                                <span class="span-content">Grado: Negro 7° Dan</span>
+                                <span class="span-content">Club: Huang Long</span>
+                                <span class="span-content">Suscripción: Activa</span>
+                            </section>
+                        </section>
+                    </article>
+                </main>
+            </section>
+        </div>
+    </div>
+
+    <!-- ICONIFY -->
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <!-- miembros -->
+    <script src="../js/miembros.js"></script>
+</body>
+
+</html>

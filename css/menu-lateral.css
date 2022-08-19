@@ -5,6 +5,7 @@
     --color-beige: rgb(164, 155, 145);
     --color-blue: rgb(93, 118, 201);
     --color-blue-light: rgb(9, 132, 227);
+    --color-blue-mar: rgb(13, 201, 255);
     --color-black: rgba(1,1,1,1);
     --color-white: rgb(255, 255, 255);
     --color-beige-obscure: rgb(120, 110, 99);
@@ -84,6 +85,11 @@ html {
 
 .border-left--blue-light {
     border-left: .3rem solid var(--color-blue-light);
+
+}
+
+.border-left--blue-mar {
+    border-left: .3rem solid var(--color-blue-mar);
 
 }
 

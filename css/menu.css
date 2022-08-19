@@ -49,6 +49,10 @@
     width: 114px;
 }
 
+.show-logo {
+    display: flex !important;
+}
+
 @media (max-width: 1020px) {
     .menu {
         display: none;

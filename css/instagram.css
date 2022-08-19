@@ -1,0 +1,15 @@
+.container-instagram {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo-instagram {
+    background-image: url(../img/logo-instagram.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+}

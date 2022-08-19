@@ -1,0 +1,336 @@
+.container-content {
+    height: 100vh;
+}
+
+.container-miembros {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    z-index: 9999;
+}
+
+.background-mobile {
+    align-items: center;
+    background-color: #EFE6DC;
+    border: 2px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.background-mobile::before {
+    content: "";
+    background-image: url(../img/logo_academy.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* PARA FULLVIEW */
+.background-fv {
+    align-items: center;
+    background-color: #EFE6DC;
+    border: 2px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    height: 100%;
+    justify-content: flex-start;
+    position: relative;
+    width: 50%;
+}
+
+.background-fv::before {
+    content: "";
+    background-image: url(../img/logo_academy.png);
+    background-size: 70% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu {
+    position: relative;
+}
+
+.link-inicio {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-decoration: none;
+    color: #111;
+    border-bottom: 2px solid #111;
+}
+
+.title-central {
+    font-size: 20px;
+}
+
+/* BUTTON */
+.button {
+    z-index: 9997;
+}
+
+/* INPUT */
+.container-input {
+    z-index: 9998;
+}
+
+
+/*Hide Arrows input type number*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.generic__input {
+    border-radius: 25px;
+    height: 60px;
+    width: 300px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+}
+
+.input--grey {
+    background-color: #EEEEEE;
+    border: 3px solid #DFDFDF;
+    color: #868686;
+}
+
+.input--grey::placeholder {
+    color: #9D9D9D;
+}
+
+.shadow--neumorphism-inset {
+    box-shadow: 3px 7px 9px 0px rgba(0, 0, 0, 0.2) inset, -7px -8px 5px 0px rgb(255, 255, 255) inset;
+}
+
+/* CARNET */
+.carnet {
+    background-color: rgba(239, 230, 220, 1);
+    border-radius: 15px;
+    border: 2px solid rgba(164, 155, 145, 1);
+    top: 91%;
+    box-shadow: 0px -1px 8px 3px rgba(48, 48, 48, 0.25);
+    height: 45%;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 99999;
+    transition: all 100ms ease-in-out;
+}
+
+.carnet::before {
+    content: "";
+    background-image: url(../img/logo_academy.png);
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 0;
+    left: 30%;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    z-index: 5;
+}
+
+/* FULL VIEW */
+.carnet-fv {
+    background-color: rgba(239, 230, 220, 1);
+    border-radius: 15px;
+    border: 2px solid rgba(164, 155, 145, 1);
+    top: 30%;
+    box-shadow: 0px -1px 8px 3px rgba(48, 48, 48, 0.25);
+    height: 45%;
+    left: 113%;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    max-width: 450px;
+    z-index: 99999;
+    transition: all 100ms ease-in-out;
+}
+
+.carnet-fv::before {
+    content: "";
+    background-image: url(../img/logo_academy.png);
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 0;
+    left: 30%;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    z-index: 5;
+}
+
+
+.carnet--position-top {
+    transform: translateY(-80%);
+}
+
+.header-carnet {
+    align-items: center;
+    display: flex;
+    height: 20%;
+    justify-content: space-between;
+    padding: 0 8px;
+    width: 100%;
+}
+
+.contenedor-drop {
+    background-color: #A49B91;
+    border-radius: 2px;
+    border: 2px solid rgba(117, 107, 96, 1);
+    cursor: pointer;
+    height: max-content;
+    padding: 0 1px;
+    width: max-content;
+}
+
+.drop {
+    transition: all 100ms ease-in-out;
+}
+
+.title-header {
+    text-align: center;
+    width: 100%;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+/* CONTENIDO CARNET*/
+.content-carnet {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.carnet-col-img {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.carnet-col-img img {
+    width: auto;
+    height: 170px;
+    object-fit: contain;
+    border-radius: 10%;
+    border: 2px solid rgba(117, 107, 96, 1);
+}
+
+.carnet-col-content {
+    width: 55%;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+    gap: 10px;
+}
+
+.span-code {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.span-liga {
+    font-size: 14px;
+}
+
+.span-name {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.span-content {
+    display: block;
+    font-size: 14px;
+    width: 100%;
+}
+
+@media (min-width: 1022px) {
+    .noMobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1022px) {
+    .noFullView {
+        display: none;
+    }
+}
+
+@media (max-height: 360px) {
+
+    /* PARA VISTAS DE CELULAR EN HORIZONTAL */
+    /* DRAGONES */
+    .dmiembros {
+        display: none;
+    }
+
+    /* CARNET */
+    .carnet {
+        top: 84%;
+        height: 100%;
+    }
+
+    .carnet::before {
+        background-size: 30% auto;
+        background-position: right;
+        left: 0;
+        right: 5%;
+    }
+    .carnet--position-top {
+        transform: translateY(-82%);
+    }
+}
+
+@media (max-width: 360px) {
+
+    /* DRAGONES */
+    .dmiembros {
+        display: none;
+    }
+}

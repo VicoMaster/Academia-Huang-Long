@@ -9,9 +9,19 @@ function toggleClass() {
 }
 
 
-botonHamburguesa.addEventListener('click', toggleClass);
-botonCerrarMenu.addEventListener('click', toggleClass);
-botonMenuLateral.addEventListener('click', toggleClass);
-enlacesMenuLateral.forEach(enlace => {
-    enlace.addEventListener('click', toggleClass);
-})
+const url = window.location;
+
+if (url.pathname.search('miembros') != -1) {
+    botonCerrarMenu.addEventListener('click', toggleClass);
+    botonMenuLateral.addEventListener('click', toggleClass);
+    enlacesMenuLateral.forEach(enlace => {
+        enlace.addEventListener('click', toggleClass);
+    })
+} else {
+    botonHamburguesa.addEventListener('click', toggleClass);
+    botonCerrarMenu.addEventListener('click', toggleClass);
+    botonMenuLateral.addEventListener('click', toggleClass);
+    enlacesMenuLateral.forEach(enlace => {
+        enlace.addEventListener('click', toggleClass);
+    })
+}
