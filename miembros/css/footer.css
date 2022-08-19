@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.footer-page {
+    background-color: #A49B91;
+    border-top: 2px solid #756B60;
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.footer-page::before {
+    background-image: url(../img/celestial_dragon_grey.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20% auto;
+    bottom: 0;
+    content: "";
+    filter: opacity(1);
+    height: auto;
+    left: 55%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+}
+
+.container-logos-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+}
+
+.container-logos-2 {
+    height: 100%;
+    width: 30%;
+}
+
+.container-description-footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 40%;
+}
+
+.text-footer {
+    align-items: center;
+    color: #111111;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.img-logos {
+    height: 75%;
+    object-fit: fill;
+    width: auto;
+    margin-right: 15px;
+}
+
+@media (max-width: 970px) {
+
+    .footer-page {
+        height: 100%; 
+    }
+
+    .footer-page::before {
+        display: none;
+    }
+
+    .text-footer {
+        font-size: 15px;
+    }
+
+    .container-description-footer {
+        width: 100%;
+    }
+
+    .container-logos-1 {
+        display: none;
+    }
+
+    .container-logos-2 {
+        display: none;
+    }
+}

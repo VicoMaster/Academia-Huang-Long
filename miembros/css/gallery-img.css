@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url(menu.css);
+@import url(load-dragon.css);
+
+.container-interactive-gallery {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-gallery-img {
+    align-items: center;
+    background-color: #EFE6DC;
+    border: 2px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    display: flex;
+    flex-direction: column;
+    height: 580px;
+    justify-content: center;
+    width: 1000px;
+    padding: 10px;
+}
+
+.container-bottons-gallery-img {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    justify-content: center;
+    width: 100%;
+}
+
+.select-gallery {
+    height: max-content;
+    text-align: center;
+    outline: none;
+    width: 100%;
+    list-style: none;
+}
+
+.select-gallery li {
+    border-radius: 3px;
+    border: 2px solid #756B60;
+    box-shadow: 0px 4px 6px 0px rgb(0, 0, 0, .25);
+    margin: 5px 0;
+}
+
+.container-title-gallery-img {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.tip-gallery-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 85%;
+}
+
+.arrow-gallery-img {
+    width: auto;
+    height: 22px;
+}
+
+.finger-gallery-img {
+    width: 25px;
+    height: auto;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.controls-gallery-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 15%;
+}
+
+.container-img-gallery {
+    align-items: center;
+    display: flex;
+    height: 70%;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-gallery-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-card {
+    border: 2px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 33%;
+    height: 380px;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .gallery-card:hover {
+        border: 2px solid #E3BA08;
+    }
+
+    .gallery-card:active {
+        transform: scale(0.98);
+    }
+}
+
+.text-help-gallery-img {
+    align-items: flex-start;
+    display: flex;
+    height: 5%;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.text-gallery-img {
+    color: #111111;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.text-gallery--bold {
+    font-weight: bold;
+}
+
+.choice {
+    display: none;
+}
+
+.img-gallery-card {
+    cursor: pointer;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 1020px) {
+    .container-interactive-gallery {
+        height: 98vh;
+    }
+
+    .container-gallery-img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .controls-gallery-img {
+        justify-content: flex-start;
+        width: 32%;
+    }
+
+    .tip-gallery-img {
+        width: 68%;
+    }
+
+    .container-title-gallery-img {
+        margin-bottom: 10px;
+    }
+
+    .container-bottons-gallery-img {
+        display: none;
+    }
+
+    .choice {
+        display: block;
+    }
+
+    .card-2, .card-3 {
+        display: none;
+    }
+
+    .card-1 {
+        width: 100%;
+    }
+
+    .gallery-card {
+        margin: 0;
+    }
+}

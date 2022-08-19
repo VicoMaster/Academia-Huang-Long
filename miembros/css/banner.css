@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+:root {
+    font-size: 62.5%;
+    /*PRE CARGA DE IMAGENES*/
+    /*Banner*/
+    --banner-1: url(../img/banners/Banner-1/banner-1.webp);
+    --banner-2: url(../img/banners/Banner-2/banner-2.webp);
+    --banner-3: url(../img/banners/Banner-3/banner-3.webp);
+    --banner-4: url(../img/banners/Banner-4/banner-4.webp);
+    /*Banner-responsive*/
+    --banner-vertical-1: url(../img/banners/Banner-1/banner-1-vertical.webp);
+    --banner-vertical-2: url(../img/banners/Banner-2/banner-2-vertical.webp);
+    --banner-vertical-3: url(../img/banners/Banner-3/banner-3-vertical.webp);
+    --banner-vertical-4: url(../img/banners/Banner-4/banner-4-vertical.webp);
+    /*ICONOS*/
+    --icon-full-circle: url(../img/logo_circulo_full.png);
+    --icon-empty-circle: url(../img/logo_circulo_empty.png);
+    --icon-hamburguer: url(../img/icon-hamburguesa.png);
+    --icon-facebook: url(../img/logo-facebook.png);
+    --icon-youtube: url(../img/icon-youtube.png);
+    --icon-wiki: url(../img/icon_wiki.png);
+    /*LOGOS*/
+    --logo-academy: url(../img/logo_academy.png);
+    --logo-fcdw: url(../img/logo_fcdw.png);
+}
+
+.container {
+    align-items: flex-start;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 3px;
+    width: 100%;
+}
+
+/*BARRA DE TEXTO - Top por performance*/
+
+.text-bar {
+    align-items: center;
+    animation-name: text-swip;
+    animation-play-state: running;
+    background: rgba(150, 150, 150, 0.7);
+    bottom: 6em;
+    display: flex;
+    height: 5em;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in;
+    width: 100%;
+}
+
+.text-bar h3 {
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.4em;
+    color: white;
+}
+
+.text-bar-1 {
+    visibility: hidden;
+}
+
+.text-bar-2 {
+    visibility: hidden;
+    animation-delay: 5s;
+}
+
+.text-bar-3 {
+    visibility: hidden;
+    animation-delay: 10s;
+}
+
+.text-bar-4 {
+    visibility: hidden;
+    animation-delay: 15s;
+}
+
+.animation-text {
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes text-swip {
+    5%, 15% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    25%, 95% {
+        visibility: hidden;
+    }
+}
+
+/*CONTENEDOR DEL BANNER*/
+
+.banner {
+    align-items: center;
+    animation-direction: normal;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-name: banner-swip;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    background-image: var(--banner-1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-radius: 5px;
+    border: 2px solid #A49B91;
+    box-shadow: 0px 19px 22px 0px #A49B91, 0px 50px 250px 0px rgb(164, 155, 145, 0.7) inset;
+    display: flex;
+    height: 430px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 1000px;
+}
+
+@keyframes banner-swip {
+    5%, 25% {
+        background-image: var(--banner-1);
+    }
+    30%, 50% {
+        background-image: var(--banner-2);
+    }
+    55%, 75% {
+        background-image: var(--banner-3);
+    }
+    80%, 95% {
+        background-image: var(--banner-4);
+    }
+}
+
+/*FLECHAS DEL BANNER*/
+/*SE COMENTAREA POR DESUSO
+.banner-bar {
+    display: flex;
+    height: 6em;
+    justify-content: space-between;
+    padding: 0 0.5em;
+    width: 100%;
+}
+
+.container-arrow {
+    align-items: center;
+    background-color: rgba(46, 44, 42, .85);
+    border-radius: 1em;
+    cursor: pointer;
+    display: flex;
+    height: 5.5em;
+    justify-content: center;
+    width: 5.5em;
+} */
+
+/*CONTENEDOR DE ICONOS SUPERIOR*/
+
+.container-icons-top {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.container-icons-right, .container-icons-left {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 50%;
+}
+
+.container-icons-right {
+    flex-direction: row-reverse;
+}
+
+.icon-banner {
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.icon-hamburguesa {
+    background-image: var(--icon-hamburguer);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+.icon-facebook {
+    background-image: var(--icon-facebook);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+.icon-youtube {
+    background-image: var(--icon-youtube);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px 30px;
+}
+
+.icon-wiki {
+    background-image: var(--icon-wiki);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+/*CONTENEDOR DE ICONOS INFERIOR*/
+
+.container-icons-bot {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: "";
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.container-icons-bot::before {
+    background-image: var(--logo-academy);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65px 65px;
+    bottom: 0;
+    content: "";
+    height: 70px;
+    left: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    position: absolute;
+    width: 70px;
+}
+
+.container-icons-bot::after {
+    background-image: var(--logo-fcdw);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65px 65px;
+    bottom: 0;
+    content: "";
+    height: 70px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    position: absolute;
+    right: 0;
+    width: 70px;
+}
+
+/*Retirado por desuso
+.icon-slider {
+    background-image: url(../img/icon-slider.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35px 45px;
+    transform: rotate(90deg);
+}
+*/
+
+.icon-circle {
+    animation-name: circle-animation;
+    animation-play-state: running;
+    background-image: var(--icon-empty-circle);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+.circle-1 {
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.circle-2 {
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: 5s;
+}
+
+.circle-3 {
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: 10s;
+}
+
+.circle-4 {
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-delay: 15s;
+}
+
+@keyframes circle-animation {
+    5%, 20% {
+        background-image: var(--icon-full-circle);
+    }
+    25%, 100% {
+        background-image: var(--icon-empty-circle);
+    }
+}
+
+/*EFECTOS BOTONES*/
+
+.hover-scale:hover {
+    transform: scale(1.1);
+}
+
+.hover-scale:active {
+    transform: scale(.95);
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1020px) {
+    .banner {
+        /*background-image: url(../img/maestros-banner-vertical.jpg);*/
+        background-image: var(--banner-vertical-1);
+        box-shadow: none;
+        height: 500px;
+    }
+    @keyframes banner-swip {
+        5%, 25% {
+            background-image: var(--banner-vertical-1);
+        }
+        30%, 50% {
+            background-image: var(--banner-vertical-2);
+        }
+        55%, 75% {
+            background-image: var(--banner-vertical-3);
+        }
+        80%, 95% {
+            background-image: var(--banner-vertical-4);
+        }
+    }
+    .container-icons-bot::before {
+        display: none;
+    }
+    .container-icons-bot::after {
+        display: none;
+    }
+    .text-bar {
+        bottom: 13em;
+    }
+    .text-bar-2 {
+        bottom: 13em;
+    }
+    .text-bar-3 {
+        bottom: 5em;
+    }
+    .text-bar-4 {
+        bottom: 5em;
+    }
+    .text-bar h3 {
+        font-size: 1.4em;
+    }
+    /* .container-arrow {
+        background-color: rgba(46, 44, 42, .60);
+    } */
+    /*FIX POR QUEDARSE PEGADO*/
+    .hover-scale:hover {
+        transform: scale(1);
+    }
+    .hover-scale:active {
+        transform: scale(.8);
+    }
+}
+
+@media (max-width: 360px) {
+    .banner {
+        height: 430px;
+    }
+}

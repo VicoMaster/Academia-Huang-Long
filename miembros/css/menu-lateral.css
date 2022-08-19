@@ -1,0 +1,130 @@
+:root {
+    --color-background-menu-lateral: rgba(51, 51, 51, 1);
+    --color-yellow: rgb(227, 186, 8);
+    --color-red: rgb(148, 66, 64);
+    --color-beige: rgb(164, 155, 145);
+    --color-blue: rgb(93, 118, 201);
+    --color-blue-light: rgb(9, 132, 227);
+    --color-blue-mar: rgb(13, 201, 255);
+    --color-black: rgba(1,1,1,1);
+    --color-white: rgb(255, 255, 255);
+    --color-beige-obscure: rgb(120, 110, 99);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.menu-lateral {
+    align-items: center;
+    background: var(--color-background-menu-lateral);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 20vw;
+    z-index: 9998;
+    transition: all 100ms ease-in-out;
+}
+
+.menu-lateral--hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container-buttons {
+    font-size: 2rem;
+    list-style: none;
+}
+
+.container-buttons li {
+    border-bottom: .2rem solid transparent;
+    margin: 2rem 0;
+    padding-left: 1rem;
+    transition: all 100ms ease-in-out;
+}
+
+.container-buttons li a {
+    align-items: center;
+    color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    width: 100%;
+}
+
+@media (hover: hover) {
+    .container-buttons li:hover {
+        border-left: .3rem solid var(--color-black);
+    }
+
+    .container-buttons li:active {
+        transform: scale(.95);
+    }
+}
+
+.border-left--yellow {
+    border-left: .3rem solid var(--color-yellow);
+}
+
+.border-left--red {
+    border-left: .3rem solid var(--color-red);
+}
+
+.border-left--beige {
+    border-left: .3rem solid var(--color-beige);
+}
+
+.border-left--blue {
+    border-left: .3rem solid var(--color-blue);
+}
+
+.border-left--blue-light {
+    border-left: .3rem solid var(--color-blue-light);
+
+}
+
+.border-left--blue-mar {
+    border-left: .3rem solid var(--color-blue-mar);
+
+}
+
+.button-close-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+}
+
+.background-button-menu{
+    align-items: center;
+    background: var(--color-beige);
+    border-radius: .2rem;
+    border: .2rem solid var(--color-beige-obscure);
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    right: 1rem;
+    margin: 1rem;
+    position: fixed;
+    top: 0;
+    transition: all 100ms ease-in-out;
+    width: 5rem;
+    z-index: 8888;
+}
+
+.boton-burguer-lateral {
+    height: 5rem;
+    width: 5rem;
+}
+
+@media (max-width: 1020px) {
+    .menu-lateral {
+        width: max-content;
+        padding: 0 1rem;
+    }
+}

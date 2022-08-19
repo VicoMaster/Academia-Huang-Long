@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container-hm {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-horario {
+    align-items: center;
+    background-color: #EFE6DC;
+    border: 2px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    display: flex;
+    flex-direction: row;
+    height: 580px;
+    justify-content: center;
+    padding: 10px;
+    width: 1000px;
+}
+
+.container-clases {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    padding: 5px;
+}
+
+.container-h3-text-hm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+.container-h3-text-hm > h3 {
+    color: #111111;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.horarios {
+    height: 90%;
+    width: 100%;
+}
+
+.text-horario-large {
+    color: #111111;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.text-horario-large > ul {
+    margin-left: 20px;
+}
+
+.container-map {
+    align-items: center;
+    border: 2px solid #756B60;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 50%;
+    padding: 8px;
+}
+
+.container-text-map {
+    height: 35%;
+    width: 100%;
+}
+
+.container-h3-map {
+    height: 30%;
+    width: 100%;
+}
+
+.container-h3-map > h3 {
+    color: #111111;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+}
+
+.container-description-text-hm{
+    height: 70%;
+    width: 100%;
+}
+
+.text-description-map {
+    color: #111111;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.container-google-map {
+    border: 2px solid #756B60;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    height: 65%;
+    width: 100%;
+}
+
+.container-clases::before {
+    background-image: url(../img/logo_academy.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    position: absolute;
+    width: 100%;
+    filter: opacity(.2);
+}
+
+@media (max-width: 970px) {
+    .container-horario {
+        flex-direction: column;
+        height: 100%;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .container-clases {
+        width: 100%;
+    }
+
+    .container-map {
+        margin-top: 15px;
+        width: 100%;
+    }
+}

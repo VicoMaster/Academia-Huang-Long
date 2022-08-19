@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-cont-2 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.content--2 {
+    display: flex;
+    height: 370px;
+    justify-content: space-around;
+    width: 1020px;
+}
+
+.container-img-cont-2 {
+    width: 35%;
+    height: auto;
+    margin: 10px;
+}
+
+.img-maestros {
+    border: 2px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    height: 100%;
+    object-fit: fill;
+    width: auto;
+}
+
+.container-texto--2 {
+    align-items: center;
+    background-color: #EFE6DC;
+    border: 2px solid #A49B91;
+    box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    height: auto;
+    justify-content: center;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    width: 65%;
+}
+
+.container-texto--2::before {
+    background-image: url(../img/logo_academy.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    position: absolute;
+    width: 100%;
+    filter: opacity(.2);
+}
+
+@media (max-width: 1020px) {
+    .content--2 {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .content--2 :nth-child(1) {
+        order: 2;
+    }
+
+    .container-img-cont-2 {
+        width: 100%;
+        height: auto;
+        margin: 0px;
+    }
+    .img-maestros {
+        height: auto;
+        width: 100%;
+    }
+    .container-texto--2 {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+}
